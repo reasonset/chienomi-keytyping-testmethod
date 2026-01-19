@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./main.css" />
+    <title>Chienomi Typing Test</title>
+  </head>
+  <body>
+    <textarea id="TestString">
+      background-attachment border-collapse box-sizing text-decoration grid-template-areas overscroll-behavior scroll-snap-type will-change backface-visibility transform-origin ::before ::after nth-child -webkit-overflow-scrolling optimizeLegibility mix-blend-mode !important
+    </textarea>
+    <div class="status_none" id="StatusBar"></div>
+    <div class="test_text_field" id="TestTextField"></div>
+    <section id="Result">
+      <h2 class="complete">Test Completed</h2>
+      <table>
+        <thead>
+          <tr><th></th><th>This</th><th>Best</th><th>Worst</th><th>Mean</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Time</th>
+            <td><input id="ResultTime" type="text" readonly size="6" /></td>
+            <td><input id="ResultTimeBest" type="text" readonly size="6" /></td>
+            <td><input id="ResultTimeWorst" type="text" readonly size="6" /></td>
+            <td><input id="ResultTimeMean" type="text" readonly size="6" /></td>
+          </tr>
+
+          <tr>
+            <th>KPM</th>
+            <td><input id="ResultKPM" type="text" readonly size="6" /></td>
+            <td><input id="ResultKPMBest" type="text" readonly size="6" /></td>
+            <td><input id="ResultKPMWorst" type="text" readonly size="6" /></td>
+            <td><input id="ResultKPMMean" type="text" readonly size="6" /></td>
+          </tr>
+
+          <tr>
+            <th>Wrong</th>
+            <td><input id="ResultWrong" type="text" readonly size="6" /></td>
+            <td><input id="ResultWrongBest" type="text" readonly size="6" /></td>
+            <td><input id="ResultWrongWorst" type="text" readonly size="6" /></td>
+            <td><input id="ResultWrongMean" type="text" readonly size="6" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="GoNext"><button id="GoNextBtn">Next attempt</button></div>
+    </section>
+  </body>
+</html>
