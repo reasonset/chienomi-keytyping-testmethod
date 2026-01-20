@@ -6,7 +6,7 @@
   </head>
   <body>
     <textarea id="TestString">
-      <%= test_string %>
+      <%= test_string.gsub(/\s+/, " ") %>
     </textarea>
     <div class="status_none" id="StatusBar"></div>
     <div class="test_text_field" id="TestTextField"></div>
