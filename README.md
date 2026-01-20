@@ -34,7 +34,7 @@ Open `index.html`.
 ## Test text status
 
 |Title|Status|Description|
-|-------|-----------|-----------------||
+|-------|-----------|-----------------|
 |develop|Change at any time|For development|
 |prog0|Fixed|Programming basic|
 |unix|Fixed|Unix basic commands|
