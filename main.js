@@ -43,6 +43,9 @@ function type_callback(e) {
 function create_testbody() {
   for (let i=0; i<test_string.length; i++) {
     const elm = document.createElement("span")
+    if (test_string[i] === " ") {
+      elm.className = "space_char"
+    }
     elm.appendChild(document.createTextNode(test_string[i]))
     test_string_ary.push(test_string[i])
     test_string_elm_ary.push(elm)

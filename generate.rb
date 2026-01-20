@@ -4,17 +4,21 @@ require 'erb'
 testmap = {
   "devel" => "Chienomi is best one.",
   "prog0" => 'if unless else do done end for foreach in true false null String Array Hash Map Set Integer Fixnum Float Boolean object call and or while until each push shift chomp return break == read open new write',
-  "ruby" => 'require each do end {|foo, bar| } to_s succ strip map open new puts next def initialize rescue ensure yield',
-  "zsh" => 'typeset for i in do done function zmodload while do done case x in a) ;; esac if then else fi continue',
+  "unix" => 'echo cat ls mv cp rm ln cut diff sed awk grep less stat wall touch wc comm find kill date ps xargs sort dd head sort mkdir du tar chown tee basename file uniq sleep',
+  "ruby" => 'require each do end {|foo, bar| } to_s succ strip map open new puts next def initialize rescue ensure yield strip select reject ->() pp include super &. attr_reader #{str} class module %r:reg/ex:',
+  "zsh" => 'typeset for i in do done function zmodload while do done case x in a) ;; esac if then else fi continue select disown whence',
   "js" => 'function var let const return if else while for async await Promise try cacthe throw console.log export import addEventListener getElementById className appendChild nextSibling createTextNode innerHTML',
   "html" => 'html head body p div section nav aside article h1 h2 h3 ul h4 li h5 table thead h6 tr th dd dt tl a link rel img href src title value name id class ol span meta lang DOCTYPE legend fieldset caption figure target',
-  "css" => '#Container {} width height color max-width margin border padding unset inherit initial calc min max @media prefers-color-scheme display flex grid position overflow position absolute fixed relative',
+  "css" => '#Container {} width height color max-width margin border padding unset inherit initial calc min max @media prefers-color-scheme display flex grid position overflow absolute fixed relative',
   "css2" => %q!grid-template-columns repeat(auto-fill, minmax(100px, 1fr)) transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); box-shadow: inset 0 0 10px rgba(0,0,0,0.5); backdrop-filter: blur(10px); @keyframes slide-in-blurred-top pointer-events: none; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;!,
   "css3" => 'background-attachment border-collapse box-sizing text-decoration grid-template-areas overscroll-behavior scroll-snap-type will-change backface-visibility transform-origin ::before ::after nth-child -webkit-overflow-scrolling optimizeLegibility mix-blend-mode !important',
   "elixir" => 'defmodule import spawn GenServer IO.puts send |> call cast start_link defp mix',
-  "chienomi" => 'Harukamy Chienomi pieces uchu-teien jlsocial void main web Fediverse ActivityPub',
+  "chienomi" => 'Harukamy Chienomi pieces uchu-teien jlsocial void main web Fediverse ruby zsh clear open note link article devel Linux server ssh rsync pbsimply',
+  "harukamy" => 'print load open food mean live move close found over space mix cosmos sound pulse loop none white basic add piano zone line social',
+  "hellkamy" => 'approve mountain describe title street timing emotion ranking opening focus through think mention cupid human bottom native stright video hype',
   "en_words" => 'start go wait book coffee door today next exit ticket phone camera help next slow now night sunday welcome information station top park window school hello free store entrance drink day finish',
-  "en_sentence" => '',
+  "en_words_long" => 'diversity words confusion coffee phone computer character law transport myrtle seagull mountain dipper valley Mercury galaxy afternoon doctor mathematics crocus airplane rally limestone entrance student locomotive psychology shrine lexicon spinner emperor motorcycle lynx olive display sanatorium intersection Moon beverage audio epic hamburger accelerator separator honor achievement emerald Eldorado hydration slinger master Jupiter ridge rain keyboard Wednesday program script opera ballad lyric article piano Neptune violin queen tremor snow tea dice orange breeze novel storm door palace fortress islet whale mobile vessel research world dependency technology guiter dog chair iron cloud nebula universe',
+  "en_sentence" => %q!Bob loved the piano. His only audience was his mother, but he never minded that. Alice did not like the violin. Her quiet, daily practice felt like a small beginning before a big stage someday. Alice loved Bob's piano music. It was free, warm, and bright like the sun. Bob loved Alice's violin. It was delicate, and he could feel a hidden passion behind her calm face.!,
   "prog_complicated" => 'ellipsis appearance perspective coefficient maintenance arithmetic anonymous privilege deprecated threshold asynchronous precedence hierarchy occurrence instantiate concatenate bezier complicated'
 }
 
