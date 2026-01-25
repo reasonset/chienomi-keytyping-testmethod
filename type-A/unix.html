@@ -1,17 +1,19 @@
 <html lang="en">
   <head>
+    <script src="./settings.js"></script>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./main.css" />
     <title>Chienomi Typing Test</title>
   </head>
   <body>
     <textarea id="TestString">
-      html head body p div section nav aside article h1 h2 h3 ul h4 li h5 table thead h6 tr th dd dt tl a link rel img href src title value name id class ol span meta lang DOCTYPE legend fieldset caption figure target
+      echo cat ls mv cp rm ln cut diff sed awk grep less stat wall touch wc comm find kill date ps xargs sort dd head sort mkdir du tar chown tee basename file uniq sleep
     </textarea>
     <div class="status_none" id="StatusBar"></div>
     <div class="test_text_field" id="TestTextField"></div>
     <section id="Result">
       <h2 class="complete">Test Completed</h2>
+      <div id="AttemptFailed"><strong>Attempt Failed</strong></div>
       <table>
         <thead>
           <tr><th></th><th>This</th><th>Best</th><th>Worst</th><th>Mean</th>

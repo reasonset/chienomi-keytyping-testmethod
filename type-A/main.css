@@ -5,7 +5,7 @@
 #TestTextField {
   font-size: max(min(2.5vw, 5vh), 20px);
   letter-spacing: 0.1em;
-  font-family: "Hermit", monospace;
+  font-family: "Menlo", "SFMono", "Consolas", "Cascadia Mono", monospace;
   white-space: break-spaces;
 }
 
@@ -19,7 +19,6 @@
 }
 
 .space_char {
-  display: inline-block;
   /* position: relative; */
   /* text-decoration: underline dotted #9cbbe5;
   text-underline-offset: -0.15em; */
@@ -78,5 +77,12 @@
 }
 
 #GoNext {
+  text-align: center;
+}
+
+#AttemptFailed {
+  color: red;
+  font-size: 120%;
+  display: none;
   text-align: center;
 }

@@ -1,24 +1,24 @@
 <html>
-  <head><title>Chienomi Typing Test Method</title></head>
+  <head>
+    <title>Chienomi Key-typing Test Method</title>
+  </head>
   <body>
-    <ul>
-      <li><a href="prog0.html">Programming basic</a></li>
-      <li><a href="unix.html">Unix basic commands</a></li>
-      <li><a href="ruby.html">Ruby basic</a></li>
-      <li><a href="zsh.html">Zsh basic</a></li>
-      <li><a href="js.html">JavaScript basic</a></li>
-      <li><a href="html.html">HTML elements and attributes</a></li>
-      <li><a href="css.html">CSS basic</a></li>
-      <li><a href="css2.html">Abrasive CSS statement</a></li>
-      <li><a href="css3.html">Magic spell like CSS words</a></li>
-      <li><a href="elixir.html">Elixir basic</a></li>
-      <li><a href="chienomi.html">Main test for Chienomi</a></li>
-      <li><a href="harukamy.html">Fit to Harukamy's typing style</a></li>
-      <li><a href="hellkamy.html">Hell for Harukamy's typing style</a></li>
-      <li><a href="en_words.html">English words</a></li>
-      <li><a href="en_words_long.html">English words (competitive)</a></li>
-      <li><a href="en_sentence.html">English sentence</a></li>
-      <li><a href="prog_complicated.html">Hell complicated words in software</a></li>
-    </ul>
+    <dl>
+      <dt><a href="./type-A/index.html">Type A</a></dt>
+      <dd>
+        <p>A typing test where you type a fixed passage until the end.
+You can attempt it as many times as you like, and your best, worst, and average results will be displayed.</p>
+        <p>Pressing Enter three times lets you cancel the current attempt.</p>
+      </dd>
+      <dt><a href="./type-B/index.html">Type B</a></dt>
+      <dd>
+        <p>A typing test where you type a fixed passage until the end.</p>
+        <p>There is a limit on the number of mistyped character indices allowed, as well as a minimum KPM (keystrokes per minute) threshold you must meet. If you exceed the mistype limit or fall below the KPM threshold, the attempt fails.</p>
+        <p>When you pass an attempt, the KPM threshold increases. When you fail an attempt, how the KPM threshold changes depends on the settings.</p>
+        <p>By specifying a value for <code>prompt</code> in the URL parameters, you can choose the passage to type. By specifying <code>threshold</code> in the URL parameters, you can change the initial KPM threshold.</p>
+        <p>There is a minimum guaranteed number of attempts you can always take. There is also a minimum number of successful attempts required to complete the test.</p>
+        <p>After completing the minimum guaranteed attempts, if all attempts so far have been successful, you may continue attempting until you fail.</p>
+      </dd>
+    </dl>
   </body>
 </html>

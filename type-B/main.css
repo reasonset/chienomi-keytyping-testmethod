@@ -1,0 +1,103 @@
+#TestString {
+  display: none;
+}
+
+#TestTextField {
+  font-size: max(min(2.5vw, 5vh), 20px);
+  letter-spacing: 0.1em;
+  font-family: "Menlo", "SFMono", "Consolas", "Cascadia Mono", monospace;
+  white-space: break-spaces;
+}
+
+.ok_char, .status_ok {
+  background-color: #77f569;
+}
+
+.wrong_char, .status_wrong {
+  background-color: #e61f11;
+  color: #fff;
+}
+
+.space_char {
+  /* position: relative; */
+  /* text-decoration: underline dotted #9cbbe5;
+  text-underline-offset: -0.15em; */
+
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 68, 255, 0.15) 2px,
+    rgba(0, 153, 255, 0.15) 4px
+  );
+
+  /* height: 1.2em;
+  background: 
+    linear-gradient(to right, #ddd 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, #ddd 1px, transparent 1px) 0 0,
+    linear-gradient(to left, #ddd 1px, transparent 1px) 100% 100%,
+    linear-gradient(to top, #ddd 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 3px 3px;
+  vertical-align: middle; */
+}
+
+/* .space_char::after {
+  content: ".";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #7fb8df;
+  font-size: 0.6em;
+  opacity: 0.5;
+  pointer-events: none;
+} */
+
+.status_none, .status_ok, .status_wrong {
+  border: 2px solid #999;
+  height: 1.5em;
+  width: 100%;
+  margin-block-end: 0.8em;
+}
+
+#Result {
+  display: none;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#Result table {
+  margin: auto;
+  width: fit-content;
+}
+
+.complete {
+  text-align: center;
+}
+
+#GoNext {
+  text-align: center;
+}
+
+#AttemptFailed {
+  color: red;
+  font-size: 120%;
+  display: none;
+  text-align: center;
+}
+
+#NextTo, #FinishedText {
+  display: none;
+}
+
+.value {
+  font-family: monospace;
+  font-weight: bold;
+  color: #ff7c35;
+}
+
+.info {
+  text-align: center;
+}

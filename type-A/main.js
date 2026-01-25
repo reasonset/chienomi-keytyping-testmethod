@@ -8,13 +8,28 @@ var end_at
 var last_index = test_string.length - 1
 var status_bar = document.getElementById("StatusBar")
 var wrong_index = new Set()
+var wrong_count = 0
 var attempts = []
+var surrender = 0
+var settings
+var failed = false
+// var typed = []
 
 function initial_callback() {
   start_at = new Date()
 }
 
 function type_callback(e) {
+  // typed.push(e.key)
+  if (e.key === "Enter") {
+    surrender++
+    if (surrender >= 3) {
+      surrender = 0
+      next_attempt()      
+    }
+    return
+  }
+  surrender = 0
   if (e.key === "Backspace" || e.key === " ") { e.preventDefault() }
   if (e.key.length !== 1) {return} // Non character key.
   const right = test_string_ary[current_index] == e.key
@@ -30,6 +45,7 @@ function type_callback(e) {
     status_bar.className = "status_ok"
     current_index++
   } else {
+    wrong_count++
     test_string_elm_ary[current_index].className = "wrong_char"
     status_bar.className = "status_wrong"
     wrong_index.add(current_index)
@@ -41,10 +57,19 @@ function type_callback(e) {
 }
 
 function create_testbody() {
+  if (settings?.fontSize) {
+    test_text_field.style.fontSize = settings.fontSize
+  }
+  if (settings?.fontFamily) {
+    test_text_field.style.fontFamily = settings.fontFamily
+  }
+
   for (let i=0; i<test_string.length; i++) {
     const elm = document.createElement("span")
     if (test_string[i] === " ") {
       elm.className = "space_char"
+    } else {
+      elm.className = "normal_char"
     }
     elm.appendChild(document.createTextNode(test_string[i]))
     test_string_ary.push(test_string[i])
@@ -109,11 +134,20 @@ function finish() {
   document.getElementById("ResultWrongWorst").value = attempt_results.wrong.worst
   document.getElementById("ResultWrongMean").value = mean_wrong.toFixed(1)
 
+  if (settings?.typosCountThreshold && settings.typosCountThreshold < wrong_count) { failed = true }
+  if (settings?.typosCountThreshold && settings.typosIndexThreshold < wrong_index.size) { failed = true }
+
+  if (failed) {
+    document.getElementById("AttemptFailed").style.display = "block"
+    attempts.pop()
+  }
+
   document.getElementById("Result").style.display = "block"
 }
 
 function next_attempt() {
   document.getElementById("Result").style.display = ""
+  document.getElementById("AttemptFailed").style.display = ""
   test_string_ary = []
   test_string_elm_ary = []
   start_at = null
@@ -122,6 +156,8 @@ function next_attempt() {
   status_bar.className = "status_none"
   test_text_field.innerHTML = ""
   wrong_index = new Set()
+  wrong_count = 0
+  failed = false
 
   create_testbody()
 }

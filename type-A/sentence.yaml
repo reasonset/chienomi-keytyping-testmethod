@@ -11,7 +11,7 @@ css2: |-
 css3: |-
   background-attachment border-collapse box-sizing text-decoration grid-template-areas overscroll-behavior scroll-snap-type will-change backface-visibility transform-origin ::before ::after nth-child -webkit-overflow-scrolling optimizeLegibility mix-blend-mode !important
 elixir: 'defmodule import spawn GenServer IO.puts send |> call cast start_link defp mix'
-chienomi: 'Harukamy Chienomi pieces uchu-teien jlsocial void main web Fediverse ruby zsh clear open note link article devel Linux server ssh rsync pbsimply'
+chienomi: 'this is chienomi  pieces uchuteien jlsocial void main web Fediverse ruby zsh clear note open article devel Linux server ssh rsync pbsimply leaf'
 harukamy: 'print load open food mean live move close found over space mix cosmos sound pulse loop none white basic add piano zone line social'
 hellkamy: 'approve mountain describe title street timing emotion ranking opening focus through think mention cupid human bottom native stright video hype'
 en_words: 'start go wait book coffee door today next exit ticket phone camera help next slow now night sunday welcome information station top park window school hello free store entrance drink day finish'
@@ -20,3 +20,4 @@ en_sentence: |-
   Bob loved the piano. His only audience was his mother, but he never minded that. Alice did not like the violin. Her quiet, daily practice felt like a small beginning before a big stage someday. Alice loved Bob's piano music. It was free, warm, and bright like the sun. Bob loved Alice's violin. It was delicate, and he could feel a hidden passion behind her calm face.
 prog_complicated: |-
   ellipsis appearance perspective coefficient maintenance arithmetic anonymous privilege deprecated threshold asynchronous precedence hierarchy occurrence instantiate concatenate bezier complicated
+test: "jlsocial jlsocial jlsocial"

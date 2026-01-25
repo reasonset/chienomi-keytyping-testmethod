@@ -1,17 +1,18 @@
 <html lang="en">
   <head>
+    <script src="./settings.js"></script>
+    <script src="./statement.js"></script>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./main.css" />
-    <title>Chienomi Typing Test</title>
+    <title>Chienomi Typing Test Type-B</title>
   </head>
   <body>
-    <textarea id="TestString">
-      Chienomi is best one.
-    </textarea>
     <div class="status_none" id="StatusBar"></div>
     <div class="test_text_field" id="TestTextField"></div>
+    <div class="info">Current KPM Threshold <span class="value" id="CurrentKPMThreshold"></span></div>
     <section id="Result">
-      <h2 class="complete">Test Completed</h2>
+      <h2 class="complete">Attempt <span class="attempt_count"></span></h2>
+      <div id="AttemptFailed"><strong>Disqualified</strong></div>
       <table>
         <thead>
           <tr><th></th><th>This</th><th>Best</th><th>Worst</th><th>Mean</th>
@@ -42,7 +43,11 @@
           </tr>
         </tbody>
       </table>
-      <div id="GoNext"><button id="GoNextBtn">Next attempt</button></div>
+      <p id="NextTo">Enter to next attempt.</p>
+      <div id="FinishedText">
+        <p>Number of successful attempts <span class="value" id="FinalResultPassed"></span></p>
+        <p>Mean KPM for successful attempts <span class="value" id="FinalResultKPM"></span></p>
+      </div>
     </section>
   </body>
 </html>
